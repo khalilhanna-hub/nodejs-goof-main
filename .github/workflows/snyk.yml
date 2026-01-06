@@ -23,7 +23,7 @@ jobs:
       - name: Snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: snyk test --severity-threshold=high
+        run: snyk test
 
       - name: Snyk monitor
         if: github.ref == 'refs/heads/main'
